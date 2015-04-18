@@ -1,14 +1,17 @@
-# Livestreamer-Assistant
-GUI for Livestreamer 1.12.1
-# Installation
-Run setup.exe from the installation folder.  
-All folders outside of the installation directory are unnecessary for deployment.
+# Livestreamer Assistant
+### Installation
+All folders outside of the installation directory are unnecessary for deployment.  
+> Run setup.exe from the installation folder.  
+> Requirements: [Livestreamer 1.12.1](http://docs.livestreamer.io/) and [VLC Media Player](http://www.videolan.org/vlc/index.html)  
 
-# About Livestreamer Assistant
-![alt tag](https://github.com/WTFender/Livestreamer-Assistant/blob/master/Live%20Streamer%20Assistant/Resources/UIexample.jpg)
+### About
+Livestreamer Assistant is designed with Twitch Integration in mind, but has basic support for all Livestreamer supported streaming services.  
 
-A simple interface for streaming video through VLC media player.  
-Primarily focused on twitch integration, but has basic support for other services.
+![](http://i.imgur.com/DGpDbM7.png)
+
+### Feedback
+Please direct all questions and feedback to Michael at wtfender.cs@gmail.com
+Livestreamer Assistant is a simple GUI for streaming video through VLC media player.
 
 Resources used:  
 1. [MetroFrameWork](https://github.com/thielj/MetroFramework)  
