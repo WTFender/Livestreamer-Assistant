@@ -267,6 +267,7 @@
     <Content Include="Resources\channels.txt" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\refreshD.png" />
+    <None Include="Resources\UIexample.jpg" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
