@@ -14,12 +14,12 @@ Livestreamer Assistant is designed with Twitch Integration in mind, but has basi
 Please direct all questions and feedback to Michael at wtfender.cs@gmail.com
 Livestreamer Assistant is a simple GUI for streaming video through VLC media player.
 
-Resources used:  
+### Resources used:  
 1. [MetroFrameWork](https://github.com/thielj/MetroFramework)  
 2. [JSON.NET](https://www.nuget.org/packages/Newtonsoft.Json/6.0.1)  
 3. [Twitch API](https://github.com/justintv/Twitch-API)
 
-Future plans:  
+### Future plans:  
 1. VLC Directory Checking  
 2. Exception Handling  
 3. Integrate more shared methods  
