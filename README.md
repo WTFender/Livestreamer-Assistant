@@ -4,6 +4,7 @@ GUI for Livestreamer 1.12.1
 Run setup.exe from the installation folder.  
 All folders outside of the installation directory are unnecessary for deployment.
 
+# About Livestreamer Assistant
 ![alt tag](https://github.com/WTFender/Livestreamer-Assistant/blob/master/Live%20Streamer%20Assistant/Resources/UIexample.jpg)
 
 A simple interface for streaming video through VLC media player.  
