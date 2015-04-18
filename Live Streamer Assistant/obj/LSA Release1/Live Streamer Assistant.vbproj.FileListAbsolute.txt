@@ -1,0 +1,19 @@
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.exe.config
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.exe.manifest
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.application
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.exe
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.pdb
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\Live Streamer Assistant.xml
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\MetroFramework.Design.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\MetroFramework.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\LSA Release1\MetroFramework.Fonts.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live_Streamer_Assistant.Resources.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live_Streamer_Assistant.Splash.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.vbproj.GenerateResource.Cache
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.exe.manifest
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.application
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.exe
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.xml
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.pdb
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live Streamer Assistant.vbprojResolveAssemblyReference.cache
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\LSA Release1\Live_Streamer_Assistant.MainForm.resources

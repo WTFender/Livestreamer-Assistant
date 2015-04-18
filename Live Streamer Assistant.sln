@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Live Streamer Assistant", "Live Streamer Assistant\Live Streamer Assistant.vbproj", "{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LSA Release1|Any CPU = LSA Release1|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.LSA Release1|Any CPU.ActiveCfg = LSA Release1|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.LSA Release1|Any CPU.Build.0 = LSA Release1|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.LSA Release1|Any CPU.Deploy.0 = LSA Release1|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
