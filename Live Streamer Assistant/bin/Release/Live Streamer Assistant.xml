@@ -15,6 +15,10 @@ LiveStreamerAssistant
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.backD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.BackIcon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -63,11 +67,19 @@ LiveStreamerAssistant
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.refreshD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.sc2">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.sf">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.UIexample">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -150,59 +150,6 @@ Public Class TopGames
 
         End If
     End Sub
-#Region "Button Zoom"
-    Private Sub BackButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BackButton.MouseEnter
-        hoverZoom(BackButton)
-    End Sub
-    Private Sub BackButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BackButton.MouseLeave
-        hoverZoomOut(BackButton)
-    End Sub
-    Private Sub StreamButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StreamButton.MouseEnter
-        hoverZoom(StreamButton)
-    End Sub
-    Private Sub StreamButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StreamButton.MouseLeave
-        hoverZoomOut(StreamButton)
-    End Sub
 
-    Private Sub HighButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HighButton.MouseEnter
-        hoverZoom(HighButton)
-    End Sub
-    Private Sub HighButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HighButton.MouseLeave
-        hoverZoomOut(HighButton)
-    End Sub
-
-    Private Sub MediumButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MediumButton.MouseEnter
-        hoverZoom(MediumButton)
-    End Sub
-    Private Sub MediumButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MediumButton.MouseLeave
-        hoverZoomOut(MediumButton)
-    End Sub
-
-    Private Sub LowButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LowButton.MouseEnter
-        hoverZoom(LowButton)
-    End Sub
-    Private Sub LowButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LowButton.MouseLeave
-        hoverZoomOut(LowButton)
-    End Sub
-
-    Private Sub MetroTile2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile2.MouseEnter
-        hoverZoom(MetroTile2)
-    End Sub
-    Private Sub MetroTile2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile2.MouseLeave
-        hoverZoomOut(MetroTile2)
-    End Sub
-    Private Sub MetroTile1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile1.MouseEnter
-        hoverZoom(MetroTile1)
-    End Sub
-    Private Sub MetroTile1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile1.MouseLeave
-        hoverZoomOut(MetroTile1)
-    End Sub
-    Private Sub MetroTile3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile3.MouseEnter
-        hoverZoom(MetroTile3)
-    End Sub
-    Private Sub MetroTile3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile3.MouseLeave
-        hoverZoomOut(MetroTile3)
-    End Sub
-#End Region
 
 End Class

@@ -23,14 +23,14 @@ Partial Class TopGames
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BackButton = New System.Windows.Forms.PictureBox()
-        Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
-        Me.MetroTile2 = New MetroFramework.Controls.MetroTile()
-        Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
-        Me.LowButton = New MetroFramework.Controls.MetroTile()
-        Me.MediumButton = New MetroFramework.Controls.MetroTile()
-        Me.HighButton = New MetroFramework.Controls.MetroTile()
-        Me.StreamButton = New MetroFramework.Controls.MetroTile()
+        Me.BackButton = New Live_Streamer_Assistant.AnimPictureBox
+        Me.MetroTile3 = New Live_Streamer_Assistant.AnimTile
+        Me.MetroTile2 = New Live_Streamer_Assistant.AnimTile
+        Me.MetroTile1 = New Live_Streamer_Assistant.AnimTile
+        Me.LowButton = New Live_Streamer_Assistant.AnimTile
+        Me.MediumButton = New Live_Streamer_Assistant.AnimTile
+        Me.HighButton = New Live_Streamer_Assistant.AnimTile
+        Me.StreamButton = New Live_Streamer_Assistant.AnimTile
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()

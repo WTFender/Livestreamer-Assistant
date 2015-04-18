@@ -22,12 +22,12 @@ Partial Class HomeScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
-        Me.MetroTile2 = New MetroFramework.Controls.MetroTile()
-        Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
-        Me.BrowseAllButton = New MetroFramework.Controls.MetroTile()
-        Me.FavoritesButton = New MetroFramework.Controls.MetroTile()
-        Me.OtherButton = New MetroFramework.Controls.MetroTile()
+        Me.MetroTile1 = New Live_Streamer_Assistant.AnimTile()
+        Me.MetroTile2 = New Live_Streamer_Assistant.AnimTile()
+        Me.MetroTile3 = New Live_Streamer_Assistant.AnimTile()
+        Me.BrowseAllButton = New Live_Streamer_Assistant.AnimTile()
+        Me.FavoritesButton = New Live_Streamer_Assistant.AnimTile()
+        Me.OtherButton = New Live_Streamer_Assistant.AnimTile()
         Me.SuspendLayout()
         '
         'MetroTile1

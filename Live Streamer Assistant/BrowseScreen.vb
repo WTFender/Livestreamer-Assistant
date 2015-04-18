@@ -179,47 +179,4 @@ Public Class BrowseScreen
             FavoritesButton.BackColor = Color.FromArgb(150, 150, 150)
         End If
     End Sub
-
-#Region "Button Zoom"
-    Private Sub BackButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BackButton.MouseEnter
-        hoverZoom(BackButton)
-    End Sub
-    Private Sub BackButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BackButton.MouseLeave
-        hoverZoomOut(BackButton)
-    End Sub
-    Private Sub StreamButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StreamButton.MouseEnter
-        hoverZoom(StreamButton)
-    End Sub
-    Private Sub StreamButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StreamButton.MouseLeave
-        hoverZoomOut(StreamButton)
-    End Sub
-
-    Private Sub HighButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HighButton.MouseEnter
-        hoverZoom(HighButton)
-    End Sub
-    Private Sub HighButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HighButton.MouseLeave
-        hoverZoomOut(HighButton)
-    End Sub
-
-    Private Sub MediumButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MediumButton.MouseEnter
-        hoverZoom(MediumButton)
-    End Sub
-    Private Sub MediumButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MediumButton.MouseLeave
-        hoverZoomOut(MediumButton)
-    End Sub
-
-    Private Sub LowButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LowButton.MouseEnter
-        hoverZoom(LowButton)
-    End Sub
-    Private Sub LowButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LowButton.MouseLeave
-        hoverZoomOut(LowButton)
-    End Sub
-
-    Private Sub FavoritesButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FavoritesButton.MouseEnter
-        hoverZoom(FavoritesButton)
-    End Sub
-    Private Sub FavoritesButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FavoritesButton.MouseLeave
-        hoverZoomOut(FavoritesButton)
-    End Sub
-#End Region
 End Class

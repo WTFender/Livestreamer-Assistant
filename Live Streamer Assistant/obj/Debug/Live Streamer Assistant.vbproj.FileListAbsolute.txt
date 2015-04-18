@@ -15,6 +15,7 @@ C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live_Streamer_Assistant.OtherServices.resources
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live_Streamer_Assistant.Splash.resources
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live_Streamer_Assistant.HomeScreen.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live_Streamer_Assistant.TestForm.resources
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live_Streamer_Assistant.TopGames.resources
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.vbproj.GenerateResource.Cache
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.exe.manifest

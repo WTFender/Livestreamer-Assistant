@@ -23,18 +23,18 @@ Partial Class Favorites
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BackButton = New System.Windows.Forms.PictureBox()
+        Me.BackButton = New Live_Streamer_Assistant.AnimPictureBox()
         Me.FaveComboBox = New MetroFramework.Controls.MetroComboBox()
         Me.StatusButton = New MetroFramework.Controls.MetroTile()
-        Me.StreamButton = New MetroFramework.Controls.MetroTile()
+        Me.StreamButton = New Live_Streamer_Assistant.AnimTile
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
-        Me.LowButton = New MetroFramework.Controls.MetroTile()
-        Me.MediumButton = New MetroFramework.Controls.MetroTile()
-        Me.HighButton = New MetroFramework.Controls.MetroTile()
-        Me.ManageFavoritesButton = New MetroFramework.Controls.MetroTile()
+        Me.LowButton = New Live_Streamer_Assistant.AnimTile
+        Me.MediumButton = New Live_Streamer_Assistant.AnimTile
+        Me.HighButton = New Live_Streamer_Assistant.AnimTile
+        Me.ManageFavoritesButton = New Live_Streamer_Assistant.AnimTile
         Me.StreamInfoPanel = New MetroFramework.Controls.MetroTile()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.RefreshButton = New System.Windows.Forms.PictureBox()
+        Me.RefreshButton = New Live_Streamer_Assistant.AnimPictureBox()
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StreamButton.SuspendLayout()
         CType(Me.RefreshButton, System.ComponentModel.ISupportInitialize).BeginInit()

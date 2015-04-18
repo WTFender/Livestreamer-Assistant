@@ -5,49 +5,11 @@ Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 Imports System.Globalization
 Imports System.Drawing.Imaging
+Imports MetroFramework.Controls.MetroTile
 
 Public Class HomeScreen
     Dim search As String
 
-#Region "Button Zoom"
-    Private Sub BrowseAllButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseAllButton.MouseEnter
-        hoverZoom(BrowseAllButton)
-    End Sub
-    Private Sub BrowseAllButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseAllButton.MouseLeave
-        hoverZoomOut(BrowseAllButton)
-    End Sub
-    Private Sub FavoritesButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FavoritesButton.MouseEnter
-        hoverZoom(FavoritesButton)
-    End Sub
-    Private Sub FavoritesButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FavoritesButton.MouseLeave
-        hoverZoomOut(FavoritesButton)
-    End Sub
-    Private Sub OtherButton_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OtherButton.MouseEnter
-        hoverZoom(OtherButton)
-    End Sub
-    Private Sub OtherButton_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OtherButton.MouseLeave
-        hoverZoomOut(OtherButton)
-    End Sub
-    Private Sub MetroTile2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile2.MouseEnter
-        hoverZoom(MetroTile2)
-    End Sub
-    Private Sub MetroTile2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile2.MouseLeave
-        hoverZoomOut(MetroTile2)
-    End Sub
-    Private Sub MetroTile1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile1.MouseEnter
-        hoverZoom(MetroTile1)
-    End Sub
-    Private Sub MetroTile1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile1.MouseLeave
-        hoverZoomOut(MetroTile1)
-    End Sub
-    Private Sub MetroTile3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile3.MouseEnter
-        hoverZoom(MetroTile3)
-    End Sub
-    Private Sub MetroTile3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroTile3.MouseLeave
-        hoverZoomOut(MetroTile3)
-    End Sub
-    
-#End Region
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not File.Exists(favePath) Then
             Dim faveWriter As StreamWriter = New StreamWriter(favePath, True)
@@ -190,4 +152,5 @@ Public Class HomeScreen
         OtherServices.Show()
         Me.Hide()
     End Sub
+
 End Class
