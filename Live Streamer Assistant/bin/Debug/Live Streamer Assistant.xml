@@ -79,6 +79,10 @@ LiveStreamerAssistant
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Live_Streamer_Assistant.My.Resources.Resources.UIexample">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="T:Live_Streamer_Assistant.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.

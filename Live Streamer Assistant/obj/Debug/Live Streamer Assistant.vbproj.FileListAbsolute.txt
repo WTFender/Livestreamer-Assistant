@@ -22,3 +22,4 @@ C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.exe
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.xml
 C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.pdb
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Live Streamer Assistant.vbprojResolveAssemblyReference.cache
