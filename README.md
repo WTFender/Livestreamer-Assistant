@@ -10,6 +10,10 @@ Livestreamer Assistant is designed with Twitch Integration in mind, but has basi
 
 ![](http://i.imgur.com/DGpDbM7.png)
 
+### Credits
+[Chrippa/Livestreamer](https://github.com/chrippa/livestreamer/)  
+Without his stream parser, my project would not exist.
+
 ### Feedback
 Please direct all questions and feedback to Michael at wtfender.cs@gmail.com
 Livestreamer Assistant is a simple GUI for streaming video through VLC media player.
