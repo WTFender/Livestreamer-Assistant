@@ -64,8 +64,8 @@ Public Class Favorites
                 HighButton.Visible = True
             End If
             StatusButton.Visible = True
-        Catch ex As Exception
-            MessageBox.Show("Check that the channel entered actually exists." & Environment.NewLine & "I'm too lazy to put in error messages for all the stuipd shit you are doing", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch
+            MessageBox.Show("Check that the channel entered actually exists.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -109,10 +109,11 @@ Public Class Favorites
         If timerCounter = 100 Then
             StreamSpinner.Visible = False
             Timer1.Enabled = False
-            MessageBox.Show("This stream is taking longer than normal to load." & Environment.NewLine &
-                            "Possible Problems:" & Environment.NewLine &
-                            "1. This stream does not support medium quality (if selected)." & Environment.NewLine &
-                            "2. Your computer blows.", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If selectedQuality = "medium" Then
+                MessageBox.Show("This stream does not support ""medium"" quality. Please select low or high quality.", "Unsupported Quality", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                MessageBox.Show("This stream is taking longer than usual to open. Possible issues include unsupported stream quality, the streamer has gone offline, or the application is suffering performance issues.", "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         End If
     End Sub
 

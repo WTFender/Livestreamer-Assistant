@@ -139,10 +139,15 @@ Public Class TopGames
                 Timer2.Enabled = False
             End If
         Next
-        If timerCounter = 50 Then
+        If timerCounter = 100 Then
             StreamSpinner.Visible = False
             Timer2.Enabled = False
-            MessageBox.Show("This stream does not support ""medium"" quality. Please select low or high quality. If it still doesn't work then it probably means I'm a shitty developer.", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If selectedQuality = "medium" Then
+                MessageBox.Show("This stream does not support ""medium"" quality. Please select low or high quality.", "Unsupported Quality", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                MessageBox.Show("This stream is taking longer than usual to open. Possible issues include unsupported stream quality, the streamer has gone offline, or the application is suffering performance issues.", "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
         End If
     End Sub
 #Region "Button Zoom"
