@@ -23,14 +23,14 @@ Partial Class TopGames
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BackButton = New Live_Streamer_Assistant.AnimPictureBox
-        Me.MetroTile3 = New Live_Streamer_Assistant.AnimTile
-        Me.MetroTile2 = New Live_Streamer_Assistant.AnimTile
-        Me.MetroTile1 = New Live_Streamer_Assistant.AnimTile
-        Me.LowButton = New Live_Streamer_Assistant.AnimTile
-        Me.MediumButton = New Live_Streamer_Assistant.AnimTile
-        Me.HighButton = New Live_Streamer_Assistant.AnimTile
-        Me.StreamButton = New Live_Streamer_Assistant.AnimTile
+        Me.BackButton = New Livestreamer_Assistant.AnimPictureBox
+        Me.MetroTile3 = New Livestreamer_Assistant.AnimTile
+        Me.MetroTile2 = New Livestreamer_Assistant.AnimTile
+        Me.MetroTile1 = New Livestreamer_Assistant.AnimTile
+        Me.LowButton = New Livestreamer_Assistant.AnimTile
+        Me.MediumButton = New Livestreamer_Assistant.AnimTile
+        Me.HighButton = New Livestreamer_Assistant.AnimTile
+        Me.StreamButton = New Livestreamer_Assistant.AnimTile
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,7 +39,7 @@ Partial Class TopGames
         '
         'BackButton
         '
-        Me.BackButton.Image = Global.Live_Streamer_Assistant.My.Resources.Resources.BackIcon
+        Me.BackButton.Image = Global.Livestreamer_Assistant.My.Resources.Resources.BackIcon
         Me.BackButton.Location = New System.Drawing.Point(255, 20)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(40, 40)

@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{17C7682A-4C1E-4BBA-9684-10C7FFA1CDDF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Live_Streamer_Assistant.My.MyApplication</StartupObject>
-    <RootNamespace>Live_Streamer_Assistant</RootNamespace>
-    <AssemblyName>Live Streamer Assistant</AssemblyName>
+    <StartupObject>Livestreamer_Assistant.My.MyApplication</StartupObject>
+    <RootNamespace>Livestreamer_Assistant</RootNamespace>
+    <AssemblyName>Livestreamer Assistant</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Live Streamer Assistant.xml</DocumentationFile>
+    <DocumentationFile>Livestreamer Assistant.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Live Streamer Assistant.xml</DocumentationFile>
+    <DocumentationFile>Livestreamer Assistant.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -76,7 +76,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LSA Release1|AnyCPU'">
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\LSA Release1\</OutputPath>
-    <DocumentationFile>Live Streamer Assistant.xml</DocumentationFile>
+    <DocumentationFile>Livestreamer Assistant.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>pdbonly</DebugType>

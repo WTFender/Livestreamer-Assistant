@@ -23,18 +23,18 @@ Partial Class Favorites
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BackButton = New Live_Streamer_Assistant.AnimPictureBox()
+        Me.BackButton = New Livestreamer_Assistant.AnimPictureBox()
         Me.FaveComboBox = New MetroFramework.Controls.MetroComboBox()
         Me.StatusButton = New MetroFramework.Controls.MetroTile()
-        Me.StreamButton = New Live_Streamer_Assistant.AnimTile
+        Me.StreamButton = New Livestreamer_Assistant.AnimTile
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
-        Me.LowButton = New Live_Streamer_Assistant.AnimTile
-        Me.MediumButton = New Live_Streamer_Assistant.AnimTile
-        Me.HighButton = New Live_Streamer_Assistant.AnimTile
-        Me.ManageFavoritesButton = New Live_Streamer_Assistant.AnimTile
+        Me.LowButton = New Livestreamer_Assistant.AnimTile
+        Me.MediumButton = New Livestreamer_Assistant.AnimTile
+        Me.HighButton = New Livestreamer_Assistant.AnimTile
+        Me.ManageFavoritesButton = New Livestreamer_Assistant.AnimTile
         Me.StreamInfoPanel = New MetroFramework.Controls.MetroTile()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.RefreshButton = New Live_Streamer_Assistant.AnimPictureBox()
+        Me.RefreshButton = New Livestreamer_Assistant.AnimPictureBox()
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StreamButton.SuspendLayout()
         CType(Me.RefreshButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,7 +42,7 @@ Partial Class Favorites
         '
         'BackButton
         '
-        Me.BackButton.Image = Global.Live_Streamer_Assistant.My.Resources.Resources.BackIcon
+        Me.BackButton.Image = Global.Livestreamer_Assistant.My.Resources.Resources.BackIcon
         Me.BackButton.Location = New System.Drawing.Point(255, 20)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(40, 40)
@@ -196,7 +196,7 @@ Partial Class Favorites
         '
         'RefreshButton
         '
-        Me.RefreshButton.Image = Global.Live_Streamer_Assistant.My.Resources.Resources.refresh
+        Me.RefreshButton.Image = Global.Livestreamer_Assistant.My.Resources.Resources.refresh
         Me.RefreshButton.Location = New System.Drawing.Point(209, 20)
         Me.RefreshButton.Name = "RefreshButton"
         Me.RefreshButton.Size = New System.Drawing.Size(40, 40)

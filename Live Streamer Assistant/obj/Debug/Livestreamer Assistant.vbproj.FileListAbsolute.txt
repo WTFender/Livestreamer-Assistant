@@ -1,0 +1,25 @@
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.exe.config
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.exe.manifest
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.application
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.exe
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.pdb
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Livestreamer Assistant.xml
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\MetroFramework.Design.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\MetroFramework.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Newtonsoft.Json.dll
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\bin\Debug\Newtonsoft.Json.xml
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.BrowseScreen.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.Favorites.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.Resources.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.OtherServices.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.Splash.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.HomeScreen.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.TestForm.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer_Assistant.TopGames.resources
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.vbproj.GenerateResource.Cache
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.exe.manifest
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.application
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.exe
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.xml
+C:\Users\McDesktop\documents\visual studio 2012\Projects\Live Streamer Assistant\Live Streamer Assistant\obj\Debug\Livestreamer Assistant.pdb

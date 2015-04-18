@@ -1,0 +1,92 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+LivestreamerAssistant
+</name>
+</assembly>
+<members>
+<member name="P:Livestreamer_Assistant.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.backD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.BackIcon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.channels">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.csgo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.d3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.dota2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.gta5">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.h1z1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.hs">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.lol">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.mc">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.pref">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.refresh">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.refreshD">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.sc2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.sf">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Livestreamer_Assistant.My.Resources.Resources.UIexample">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Livestreamer_Assistant.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Live_Streamer_Assistant.HomeScreen
+            Me.MainForm = Global.Livestreamer_Assistant.HomeScreen
         End Sub
     End Class
 End Namespace
