@@ -1,4 +1,5 @@
 # Livestreamer Assistant
+A Simple Livestreamer Interface
 ### Installation
 All folders outside of the installation directory are unnecessary for deployment.  
 > Run setup.exe from the installation folder.  
