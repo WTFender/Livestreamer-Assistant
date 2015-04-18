@@ -3,7 +3,7 @@ A Simple Livestreamer Interface
 ### Installation
 All folders outside of the installation directory are unnecessary for deployment.  
 > Run setup.exe from the installation folder.  
-> Requirements: [Livestreamer 1.12.1](http://docs.livestreamer.io/) and [VLC Media Player](http://www.videolan.org/vlc/index.html)  
+> Requirements: .NET 4.5, [Livestreamer 1.12.1](http://docs.livestreamer.io/), and [VLC Media Player](http://www.videolan.org/vlc/index.html)  
 
 ### About
 Livestreamer Assistant is designed with Twitch Integration in mind, but has basic support for all Livestreamer supported streaming services.  
