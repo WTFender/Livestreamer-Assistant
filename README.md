@@ -1,8 +1,8 @@
 # Livestreamer Assistant
 A Simple Livestreamer Interface
 ### Installation
-All folders outside of the installation directory are unnecessary for deployment.  
-> Run setup.exe from the installation folder.  
+All folders outside of the installation.zip are unnecessary for deployment.  
+> Run setup.exe from the installation.zip.  
 > Requirements: .NET 4.5, [Livestreamer 1.12.1](http://docs.livestreamer.io/), and [VLC Media Player](http://www.videolan.org/vlc/index.html)  
 
 ### About
