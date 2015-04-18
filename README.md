@@ -13,7 +13,7 @@ Resources used:
 3. [Twitch API](https://github.com/justintv/Twitch-API)
 
 Future plans:  
-1. VLC Directory Checking
+1. VLC Directory Checking  
 2. Exception Handling  
 3. Integrate more shared methods  
 4. Sorting options for lists  
