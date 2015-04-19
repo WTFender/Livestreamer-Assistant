@@ -26,5 +26,5 @@ Livestreamer Assistant is a simple GUI for streaming video through VLC media pla
 ### Future plans:  
 1. VLC Directory Checking  
 2. Exception Handling  
-3. Integrate more shared methods  
+3. MPC Integration  
 4. Sorting options for lists  
