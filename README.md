@@ -1,4 +1,5 @@
 # Livestreamer Assistant
+##[Features & Installation Video](https://www.youtube.com/watch?v=hMov8N94Sho)  
 A Simple Livestreamer Interface
 ### Installation
 All folders outside of the installation.zip are unnecessary for deployment.  
