@@ -1,6 +1,8 @@
 ﻿Public Class OtherServices
     Dim timerCounter As Integer
     Dim selectedQuality As String
+
+    'Hide all, back to HomeScreen
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         HomeScreen.StartPosition = FormStartPosition.Manual
         HomeScreen.Location = Me.Location
@@ -8,11 +10,13 @@
         Me.Close()
     End Sub
 
+    'ComboBox formatting (hardcoded values)
     Private Sub OtherServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ServiceComboBox.Sorted = True
         ServiceComboBox.DropDownHeight = ServiceComboBox.Height * 7
     End Sub
 
+    'Sends cmd stream commands and starts timer
     Private Sub StreamButton_Click(sender As Object, e As EventArgs) Handles StreamButton.Click
         StreamSpinner.Visible = True
         Timer1.Enabled = True
@@ -24,6 +28,7 @@
         Process.Start(p)
     End Sub
 
+    'Timer - Throws error after 10s of searching for stream, enables loading icon
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerCounter = timerCounter + 1
         Dim proc = Process.GetProcessesByName("vlc")
@@ -45,33 +50,30 @@
         End If
     End Sub
 
-    Private Sub HighButton_Click(sender As Object, e As EventArgs) Handles HighButton.Click
-        HighButton.BackColor = Color.FromArgb(0, 163, 0)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
-        selectedQuality = "best"
+    #Region "Quality Buttons: Sets quality selection and button colors"
+    Private Sub HighTile_Click(sender As Object, e As EventArgs) Handles HighQualityTile.Click
+        HighQualityTile.setQuality(MediumQualityTile, LowQualityTile)
+        selectedQuality = "high"
         StreamButton.Visible = True
     End Sub
 
-    Private Sub MediumButton_Click(sender As Object, e As EventArgs) Handles MediumButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(227, 162, 26)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
+    Private Sub MediumTile_Click(sender As Object, e As EventArgs) Handles MediumQualityTile.Click
+        MediumQualityTile.setQuality(HighQualityTile, LowQualityTile)
         selectedQuality = "medium"
         StreamButton.Visible = True
     End Sub
 
-    Private Sub LowButton_Click(sender As Object, e As EventArgs) Handles LowButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(185, 29, 71)
-        selectedQuality = "worst"
+    Private Sub LowTile_Click(sender As Object, e As EventArgs) Handles LowQualityTile.Click
+        LowQualityTile.setQuality(HighQualityTile, MediumQualityTile)
+        selectedQuality = "low"
         StreamButton.Visible = True
     End Sub
+#End Region
 
+    'On click, show quality buttons
     Private Sub ChanTextBox_Click(sender As Object, e As EventArgs) Handles ChanTextBox.Click
-        HighButton.Visible = True
-        MediumButton.Visible = True
-        LowButton.Visible = True
+        HighQualityTile.Visible = True
+        MediumQualityTile.Visible = True
+        LowQualityTile.Visible = True
     End Sub
 End Class

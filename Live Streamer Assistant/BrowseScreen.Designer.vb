@@ -28,15 +28,17 @@ Partial Class BrowseScreen
         Me.StreamerComboBox = New MetroFramework.Controls.MetroComboBox()
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.HighButton = New Livestreamer_Assistant.AnimTile()
-        Me.MediumButton = New Livestreamer_Assistant.AnimTile()
-        Me.LowButton = New Livestreamer_Assistant.AnimTile()
         Me.StreamButton = New Livestreamer_Assistant.AnimTile()
         Me.FavoritesButton = New Livestreamer_Assistant.AnimTile()
         Me.PreviewPictureBox = New System.Windows.Forms.PictureBox()
+        Me.HighQualityTile = New Livestreamer_Assistant.QualityTile()
+        Me.LowQualityTile = New Livestreamer_Assistant.QualityTile()
+        Me.MediumQualityTile = New Livestreamer_Assistant.QualityTile()
+        Me.RefreshButton = New Livestreamer_Assistant.AnimPictureBox()
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StreamButton.SuspendLayout()
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefreshButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BackButton
@@ -88,59 +90,6 @@ Partial Class BrowseScreen
         'Timer1
         '
         '
-        'HighButton
-        '
-        Me.HighButton.ActiveControl = Nothing
-        Me.HighButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.HighButton.Location = New System.Drawing.Point(230, 264)
-        Me.HighButton.Name = "HighButton"
-        Me.HighButton.Size = New System.Drawing.Size(97, 50)
-        Me.HighButton.Style = MetroFramework.MetroColorStyle.Green
-        Me.HighButton.TabIndex = 54
-        Me.HighButton.Text = "High"
-        Me.HighButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HighButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.HighButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.HighButton.UseCustomBackColor = True
-        Me.HighButton.UseSelectable = True
-        Me.HighButton.UseTileImage = True
-        Me.HighButton.Visible = False
-        '
-        'MediumButton
-        '
-        Me.MediumButton.ActiveControl = Nothing
-        Me.MediumButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.MediumButton.Location = New System.Drawing.Point(127, 264)
-        Me.MediumButton.Name = "MediumButton"
-        Me.MediumButton.Size = New System.Drawing.Size(97, 50)
-        Me.MediumButton.Style = MetroFramework.MetroColorStyle.Silver
-        Me.MediumButton.TabIndex = 55
-        Me.MediumButton.Text = "Medium"
-        Me.MediumButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.MediumButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.MediumButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.MediumButton.UseCustomBackColor = True
-        Me.MediumButton.UseSelectable = True
-        Me.MediumButton.UseTileImage = True
-        Me.MediumButton.Visible = False
-        '
-        'LowButton
-        '
-        Me.LowButton.ActiveControl = Nothing
-        Me.LowButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.LowButton.Location = New System.Drawing.Point(23, 264)
-        Me.LowButton.Name = "LowButton"
-        Me.LowButton.Size = New System.Drawing.Size(97, 50)
-        Me.LowButton.Style = MetroFramework.MetroColorStyle.Silver
-        Me.LowButton.TabIndex = 56
-        Me.LowButton.Text = "Low"
-        Me.LowButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.LowButton.TileImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.LowButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.LowButton.UseCustomBackColor = True
-        Me.LowButton.UseSelectable = True
-        Me.LowButton.Visible = False
-        '
         'StreamButton
         '
         Me.StreamButton.ActiveControl = Nothing
@@ -186,18 +135,68 @@ Partial Class BrowseScreen
         Me.PreviewPictureBox.TabStop = False
         Me.PreviewPictureBox.Visible = False
         '
+        'HighQualityTile
+        '
+        Me.HighQualityTile.ActiveControl = Nothing
+        Me.HighQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.HighQualityTile.Location = New System.Drawing.Point(230, 264)
+        Me.HighQualityTile.Name = "HighQualityTile"
+        Me.HighQualityTile.Size = New System.Drawing.Size(97, 50)
+        Me.HighQualityTile.TabIndex = 62
+        Me.HighQualityTile.Text = "High"
+        Me.HighQualityTile.UseCustomBackColor = True
+        Me.HighQualityTile.UseSelectable = True
+        Me.HighQualityTile.Visible = False
+        '
+        'LowQualityTile
+        '
+        Me.LowQualityTile.ActiveControl = Nothing
+        Me.LowQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.LowQualityTile.Location = New System.Drawing.Point(23, 264)
+        Me.LowQualityTile.Name = "LowQualityTile"
+        Me.LowQualityTile.Size = New System.Drawing.Size(97, 50)
+        Me.LowQualityTile.TabIndex = 63
+        Me.LowQualityTile.Text = "Low"
+        Me.LowQualityTile.UseCustomBackColor = True
+        Me.LowQualityTile.UseSelectable = True
+        Me.LowQualityTile.Visible = False
+        '
+        'MediumQualityTile
+        '
+        Me.MediumQualityTile.ActiveControl = Nothing
+        Me.MediumQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.MediumQualityTile.Location = New System.Drawing.Point(126, 264)
+        Me.MediumQualityTile.Name = "MediumQualityTile"
+        Me.MediumQualityTile.Size = New System.Drawing.Size(98, 50)
+        Me.MediumQualityTile.TabIndex = 64
+        Me.MediumQualityTile.Text = "Medium"
+        Me.MediumQualityTile.UseCustomBackColor = True
+        Me.MediumQualityTile.UseSelectable = True
+        Me.MediumQualityTile.Visible = False
+        '
+        'RefreshButton
+        '
+        Me.RefreshButton.Image = Global.Livestreamer_Assistant.My.Resources.Resources.refresh
+        Me.RefreshButton.Location = New System.Drawing.Point(209, 20)
+        Me.RefreshButton.Name = "RefreshButton"
+        Me.RefreshButton.Size = New System.Drawing.Size(40, 40)
+        Me.RefreshButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.RefreshButton.TabIndex = 66
+        Me.RefreshButton.TabStop = False
+        '
         'BrowseScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(350, 400)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RefreshButton)
+        Me.Controls.Add(Me.MediumQualityTile)
+        Me.Controls.Add(Me.LowQualityTile)
+        Me.Controls.Add(Me.HighQualityTile)
         Me.Controls.Add(Me.PreviewPictureBox)
         Me.Controls.Add(Me.FavoritesButton)
         Me.Controls.Add(Me.StreamButton)
-        Me.Controls.Add(Me.LowButton)
-        Me.Controls.Add(Me.MediumButton)
-        Me.Controls.Add(Me.HighButton)
         Me.Controls.Add(Me.StreamerComboBox)
         Me.Controls.Add(Me.GameComboBox)
         Me.Controls.Add(Me.BackButton)
@@ -210,18 +209,20 @@ Partial Class BrowseScreen
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StreamButton.ResumeLayout(False)
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefreshButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BackButton As System.Windows.Forms.PictureBox
     Friend WithEvents GameComboBox As MetroFramework.Controls.MetroComboBox
     Friend WithEvents StreamerComboBox As MetroFramework.Controls.MetroComboBox
     Friend WithEvents StreamSpinner As MetroFramework.Controls.MetroProgressSpinner
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents HighButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents MediumButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents LowButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents StreamButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents FavoritesButton As MetroFramework.Controls.MetroTile
     Friend WithEvents PreviewPictureBox As System.Windows.Forms.PictureBox
+    Friend WithEvents BackButton As Livestreamer_Assistant.AnimPictureBox
+    Friend WithEvents StreamButton As Livestreamer_Assistant.AnimTile
+    Friend WithEvents HighQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents LowQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents MediumQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents RefreshButton As Livestreamer_Assistant.AnimPictureBox
+    Friend WithEvents FavoritesButton As Livestreamer_Assistant.AnimTile
 End Class

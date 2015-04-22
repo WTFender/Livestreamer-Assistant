@@ -10,17 +10,21 @@ Public Class Favorites
     Dim selectedQuality As String
     Dim timerCounter As Integer
 
+    'On form load, load favorites ComboBox
     Private Sub Favorites_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadFavorites()
     End Sub
 
+    'Hide all, back to HomeScreen
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         HomeScreen.StartPosition = FormStartPosition.Manual
         HomeScreen.Location = Me.Location
         HomeScreen.Show()
+        hideAllButtons()
         Me.Close()
     End Sub
 
+    'Populate favorites ComboBox
     Private Sub loadFavorites()
         FaveComboBox.Items.Clear()
         Dim faveReader As New StreamReader(favePath)
@@ -30,12 +34,14 @@ Public Class Favorites
         faveReader.Close()
         FaveComboBox.Sorted = True
     End Sub
-    
+
+    'Streamer selection, display online status
     Private Sub FaveComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FaveComboBox.SelectedIndexChanged
         selectedStreamer = FaveComboBox.Text
         onlineStatus()
     End Sub
 
+    'Determine and display onlinestatus
     Private Sub onlineStatus()
         Try
             Dim getlivegamesClient As New System.Net.WebClient
@@ -47,9 +53,7 @@ Public Class Favorites
                 StatusButton.BackColor = Color.FromArgb(229, 20, 0)
                 StatusButton.Text = selectedStreamer & Environment.NewLine & "Offline"
                 StreamInfoPanel.Visible = False
-                LowButton.Visible = False
-                MediumButton.Visible = False
-                HighButton.Visible = False
+                hideQualityButtons()
             Else
                 StatusButton.BackColor = Color.FromArgb(51, 153, 51)
                 StatusButton.Text = selectedStreamer & Environment.NewLine & "Online"
@@ -59,9 +63,7 @@ Public Class Favorites
                 StreamInfoPanel.Text = title.ToString & Environment.NewLine & String.Format(CultureInfo.InvariantCulture, "{0:0,0.}", Decimal.Parse(viewers)) & " Viewers" & Environment.NewLine & "Playing " & game.ToString
                 StreamInfoPanel.TileImage = setInfoImage(game)
                 StreamInfoPanel.Visible = True
-                LowButton.Visible = True
-                MediumButton.Visible = True
-                HighButton.Visible = True
+                showQualityButtons()
             End If
             StatusButton.Visible = True
         Catch
@@ -70,6 +72,32 @@ Public Class Favorites
 
     End Sub
 
+#Region "Show/Hide Buttons/Controls"
+    Private Sub hideQualityButtons()
+        LowQualityTile.Visible = False
+        MediumQualityTile.Visible = False
+        HighQualityTile.Visible = False
+    End Sub
+
+    Private Sub showQualityButtons()
+        LowQualityTile.Visible = True
+        MediumQualityTile.Visible = True
+        HighQualityTile.Visible = True
+    End Sub
+
+    Private Sub hideAllButtons()
+        StreamButton.Visible = False
+        StatusButton.Visible = False
+        LowQualityTile.Visible = False
+        LowQualityTile.setInactive()
+        MediumQualityTile.Visible = False
+        MediumQualityTile.setInactive()
+        HighQualityTile.Visible = False
+        HighQualityTile.setInactive()
+    End Sub
+#End Region
+
+    'Sets game image
     Private Function setInfoImage(ByVal game As String) As Bitmap
         Select Case game.ToLower
             Case "league of legends"
@@ -97,6 +125,7 @@ Public Class Favorites
         End Select
     End Function
 
+    'Timer - Throws error after 10s of searching for stream, enables loading icon
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerCounter = timerCounter + 1
         Dim proc = Process.GetProcessesByName("vlc")
@@ -117,6 +146,7 @@ Public Class Favorites
         End If
     End Sub
 
+    'Sends cmd stream commands and starts timer
     Private Sub StreamButton_Click_1(sender As Object, e As EventArgs) Handles StreamButton.Click
         StreamSpinner.Visible = True
         Timer1.Enabled = True
@@ -127,48 +157,36 @@ Public Class Favorites
         Process.Start(p)
     End Sub
 
-    Private Sub HighButton_Click(sender As Object, e As EventArgs) Handles HighButton.Click
-        HighButton.BackColor = Color.FromArgb(0, 163, 0)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
-        selectedQuality = "best"
+#Region "Quality Buttons: Sets quality selection and button colors"
+    Private Sub HighTile_Click(sender As Object, e As EventArgs) Handles HighQualityTile.Click
+        HighQualityTile.setQuality(MediumQualityTile, LowQualityTile)
+        selectedQuality = "high"
         StreamButton.Visible = True
     End Sub
 
-    Private Sub MediumButton_Click(sender As Object, e As EventArgs) Handles MediumButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(227, 162, 26)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
+    Private Sub MediumTile_Click(sender As Object, e As EventArgs) Handles MediumQualityTile.Click
+        MediumQualityTile.setQuality(HighQualityTile, LowQualityTile)
         selectedQuality = "medium"
         StreamButton.Visible = True
     End Sub
 
-    Private Sub LowButton_Click(sender As Object, e As EventArgs) Handles LowButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(185, 29, 71)
-        selectedQuality = "worst"
+    Private Sub LowTile_Click(sender As Object, e As EventArgs) Handles LowQualityTile.Click
+        LowQualityTile.setQuality(HighQualityTile, MediumQualityTile)
+        selectedQuality = "low"
         StreamButton.Visible = True
     End Sub
+#End Region
 
+    'Open text file for editing
     Private Sub ManageFavoritesButton_Click(sender As Object, e As EventArgs) Handles ManageFavoritesButton.Click
-        LowButton.Visible = False
-        MediumButton.Visible = False
-        HighButton.Visible = False
-        StreamButton.Visible = False
-        StreamInfoPanel.Visible = False
-        StatusButton.Visible = False
+        hideAllButtons()
         MessageBox.Show("Favorites are saved in a simple text file." & Environment.NewLine & "Add/Remove favorites and save the file." & Environment.NewLine & "Refresh Favorites after changing", "Manage Favorites", MessageBoxButtons.OK, MessageBoxIcon.Information)
         System.Diagnostics.Process.Start("Notepad.exe", favePath)
     End Sub
 
+    'Refresh ComboBox with file 
     Private Sub RefreshButton_Click(sender As Object, e As EventArgs) Handles RefreshButton.Click
-        StatusButton.Visible = False
-        StreamInfoPanel.Visible = False
-        LowButton.Visible = False
-        MediumButton.Visible = False
-        HighButton.Visible = False
-        StreamButton.Visible = False
+        hideAllButtons()
         loadFavorites()
     End Sub
 End Class

@@ -23,15 +23,15 @@ Partial Class OtherServices
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BackButton = New Livestreamer_Assistant.AnimPictureBox
-        Me.LowButton = New Livestreamer_Assistant.AnimTile
-        Me.MediumButton = New Livestreamer_Assistant.AnimTile
-        Me.HighButton = New Livestreamer_Assistant.AnimTile
-        Me.StreamButton = New Livestreamer_Assistant.AnimTile
+        Me.BackButton = New Livestreamer_Assistant.AnimPictureBox()
+        Me.StreamButton = New Livestreamer_Assistant.AnimTile()
         Me.StreamSpinner = New MetroFramework.Controls.MetroProgressSpinner()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ServiceComboBox = New MetroFramework.Controls.MetroComboBox()
         Me.ChanTextBox = New MetroFramework.Controls.MetroTextBox()
+        Me.MediumQualityTile = New Livestreamer_Assistant.QualityTile()
+        Me.LowQualityTile = New Livestreamer_Assistant.QualityTile()
+        Me.HighQualityTile = New Livestreamer_Assistant.QualityTile()
         CType(Me.BackButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StreamButton.SuspendLayout()
         Me.SuspendLayout()
@@ -45,59 +45,6 @@ Partial Class OtherServices
         Me.BackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BackButton.TabIndex = 32
         Me.BackButton.TabStop = False
-        '
-        'LowButton
-        '
-        Me.LowButton.ActiveControl = Nothing
-        Me.LowButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.LowButton.Location = New System.Drawing.Point(23, 243)
-        Me.LowButton.Name = "LowButton"
-        Me.LowButton.Size = New System.Drawing.Size(97, 71)
-        Me.LowButton.Style = MetroFramework.MetroColorStyle.Silver
-        Me.LowButton.TabIndex = 65
-        Me.LowButton.Text = "Low"
-        Me.LowButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.LowButton.TileImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.LowButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.LowButton.UseCustomBackColor = True
-        Me.LowButton.UseSelectable = True
-        Me.LowButton.Visible = False
-        '
-        'MediumButton
-        '
-        Me.MediumButton.ActiveControl = Nothing
-        Me.MediumButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.MediumButton.Location = New System.Drawing.Point(126, 243)
-        Me.MediumButton.Name = "MediumButton"
-        Me.MediumButton.Size = New System.Drawing.Size(97, 71)
-        Me.MediumButton.Style = MetroFramework.MetroColorStyle.Silver
-        Me.MediumButton.TabIndex = 64
-        Me.MediumButton.Text = "Medium"
-        Me.MediumButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.MediumButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.MediumButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.MediumButton.UseCustomBackColor = True
-        Me.MediumButton.UseSelectable = True
-        Me.MediumButton.UseTileImage = True
-        Me.MediumButton.Visible = False
-        '
-        'HighButton
-        '
-        Me.HighButton.ActiveControl = Nothing
-        Me.HighButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.HighButton.Location = New System.Drawing.Point(230, 243)
-        Me.HighButton.Name = "HighButton"
-        Me.HighButton.Size = New System.Drawing.Size(97, 71)
-        Me.HighButton.Style = MetroFramework.MetroColorStyle.Green
-        Me.HighButton.TabIndex = 63
-        Me.HighButton.Text = "High"
-        Me.HighButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HighButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.HighButton.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall
-        Me.HighButton.UseCustomBackColor = True
-        Me.HighButton.UseSelectable = True
-        Me.HighButton.UseTileImage = True
-        Me.HighButton.Visible = False
         '
         'StreamButton
         '
@@ -159,17 +106,56 @@ Partial Class OtherServices
         Me.ChanTextBox.TabIndex = 67
         Me.ChanTextBox.UseSelectable = True
         '
+        'MediumQualityTile
+        '
+        Me.MediumQualityTile.ActiveControl = Nothing
+        Me.MediumQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.MediumQualityTile.Location = New System.Drawing.Point(126, 264)
+        Me.MediumQualityTile.Name = "MediumQualityTile"
+        Me.MediumQualityTile.Size = New System.Drawing.Size(98, 50)
+        Me.MediumQualityTile.TabIndex = 70
+        Me.MediumQualityTile.Text = "Medium"
+        Me.MediumQualityTile.UseCustomBackColor = True
+        Me.MediumQualityTile.UseSelectable = True
+        Me.MediumQualityTile.Visible = False
+        '
+        'LowQualityTile
+        '
+        Me.LowQualityTile.ActiveControl = Nothing
+        Me.LowQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.LowQualityTile.Location = New System.Drawing.Point(23, 264)
+        Me.LowQualityTile.Name = "LowQualityTile"
+        Me.LowQualityTile.Size = New System.Drawing.Size(97, 50)
+        Me.LowQualityTile.TabIndex = 69
+        Me.LowQualityTile.Text = "Low"
+        Me.LowQualityTile.UseCustomBackColor = True
+        Me.LowQualityTile.UseSelectable = True
+        Me.LowQualityTile.Visible = False
+        '
+        'HighQualityTile
+        '
+        Me.HighQualityTile.ActiveControl = Nothing
+        Me.HighQualityTile.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.HighQualityTile.Location = New System.Drawing.Point(230, 264)
+        Me.HighQualityTile.Name = "HighQualityTile"
+        Me.HighQualityTile.Size = New System.Drawing.Size(97, 50)
+        Me.HighQualityTile.TabIndex = 68
+        Me.HighQualityTile.Text = "High"
+        Me.HighQualityTile.UseCustomBackColor = True
+        Me.HighQualityTile.UseSelectable = True
+        Me.HighQualityTile.Visible = False
+        '
         'OtherServices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(350, 400)
         Me.ControlBox = False
+        Me.Controls.Add(Me.MediumQualityTile)
+        Me.Controls.Add(Me.LowQualityTile)
+        Me.Controls.Add(Me.HighQualityTile)
         Me.Controls.Add(Me.ChanTextBox)
         Me.Controls.Add(Me.ServiceComboBox)
-        Me.Controls.Add(Me.LowButton)
-        Me.Controls.Add(Me.MediumButton)
-        Me.Controls.Add(Me.HighButton)
         Me.Controls.Add(Me.StreamButton)
         Me.Controls.Add(Me.BackButton)
         Me.Name = "OtherServices"
@@ -181,13 +167,13 @@ Partial Class OtherServices
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BackButton As System.Windows.Forms.PictureBox
-    Friend WithEvents LowButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents MediumButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents HighButton As MetroFramework.Controls.MetroTile
-    Friend WithEvents StreamButton As MetroFramework.Controls.MetroTile
     Friend WithEvents StreamSpinner As MetroFramework.Controls.MetroProgressSpinner
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents ServiceComboBox As MetroFramework.Controls.MetroComboBox
     Friend WithEvents ChanTextBox As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MediumQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents LowQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents HighQualityTile As Livestreamer_Assistant.QualityTile
+    Friend WithEvents BackButton As Livestreamer_Assistant.AnimPictureBox
+    Friend WithEvents StreamButton As Livestreamer_Assistant.AnimTile
 End Class

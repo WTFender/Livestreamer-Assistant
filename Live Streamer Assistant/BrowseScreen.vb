@@ -12,19 +12,27 @@ Public Class BrowseScreen
     Dim selectedQuality As String
     Dim timerCounter As Integer
 
+    'On load, show populate and show GameComboBox
     Private Sub BrowseScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadGameComboBox()
         GameComboBox.Visible = True
     End Sub
 
+    'Hide all, back to HomeScreen
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         HomeScreen.StartPosition = FormStartPosition.Manual
         HomeScreen.Location = Me.Location
         HomeScreen.Show()
+        hideControls()
         Me.Close()
-        LowButton.Visible = False
-        MediumButton.Visible = False
-        HighButton.Visible = False
+        
+    End Sub
+
+#Region "Show/Hide commands for form controls"
+    Private Sub hideControls()
+        LowQualityTile.Visible = False
+        MediumQualityTile.Visible = False
+        HighQualityTile.Visible = False
         StreamButton.Visible = False
         PreviewPictureBox.Visible = False
         StreamerComboBox.Visible = False
@@ -32,6 +40,27 @@ Public Class BrowseScreen
         StreamSpinner.Visible = False
     End Sub
 
+    Private Sub showQualityButtons()
+        FavoritesButton.Visible = True
+        LowQualityTile.Visible = True
+        MediumQualityTile.Visible = True
+        HighQualityTile.Visible = True
+    End Sub
+
+    Private Sub hideAllButtons()
+        StreamButton.Visible = False
+        PreviewPictureBox.Visible = False
+        FavoritesButton.Visible = False
+        LowQualityTile.Visible = False
+        LowQualityTile.setInactive()
+        MediumQualityTile.Visible = False
+        MediumQualityTile.setInactive()
+        HighQualityTile.Visible = False
+        HighQualityTile.setInactive()
+    End Sub
+#End Region
+
+    'Populates GameComboBox
     Private Sub loadGameComboBox()
         Dim getlivegamesClient As New System.Net.WebClient
         Dim result As String = getlivegamesClient.DownloadString("https://api.twitch.tv/kraken/games/top?limit=100&offset=")
@@ -47,6 +76,7 @@ Public Class BrowseScreen
         Next
     End Sub
 
+    'Populates StreamerComboBox
     Private Sub loadStreamerComboBox()
         StreamerComboBox.Visible = True
         Dim getlivegamesClient As New System.Net.WebClient
@@ -62,6 +92,7 @@ Public Class BrowseScreen
         Next
     End Sub
 
+    'Shows stream snapshot/picture
     Private Sub loadStreamerInfo(ByVal selectedStreamer As Integer)
         Dim getlivegamesClient As New System.Net.WebClient
         Dim result As String = getlivegamesClient.DownloadString("https://api.twitch.tv/kraken/streams?game=" & selectedGame)
@@ -74,30 +105,26 @@ Public Class BrowseScreen
         PreviewPictureBox.BackgroundImageLayout = ImageLayout.Stretch
         PreviewPictureBox.Visible = True
         Dim viewers As String = streamlist.Item("streams").Item(selectedStreamer).Item("viewers").ToString
-        FavoritesButton.Visible = True
-        LowButton.Visible = True
-        MediumButton.Visible = True
-        HighButton.Visible = True
+        showQualityButtons()
         searchFavorites()
     End Sub
 
+    'Selects game and populates StreamerComboBox
     Private Sub GameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GameComboBox.SelectedIndexChanged
         StreamerComboBox.Items.Clear()
+        'Formatting for web browser
         selectedGame = GameComboBox.Text.Replace(" ", "%20")
         loadStreamerComboBox()
-        PreviewPictureBox.Visible = False
-        FavoritesButton.Visible = False
-        LowButton.Visible = False
-        MediumButton.Visible = False
-        HighButton.Visible = False
-
+        hideAllButtons()
     End Sub
 
+    'Load Streamer ComboBox and set selection
     Private Sub StreamerComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles StreamerComboBox.SelectedIndexChanged
         selectedStreamer = StreamerComboBox.SelectedIndex
         loadStreamerInfo(selectedStreamer)
     End Sub
 
+    'Timer - Throws error after 10s of searching for stream, enables loading icon
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         timerCounter = timerCounter + 1
         Dim proc = Process.GetProcessesByName("vlc")
@@ -119,6 +146,27 @@ Public Class BrowseScreen
         End If
     End Sub
 
+#Region "Quality Buttons: Sets quality selection and button colors"
+    Private Sub HighTile_Click(sender As Object, e As EventArgs) Handles HighQualityTile.Click
+        HighQualityTile.setQuality(MediumQualityTile, LowQualityTile)
+        selectedQuality = "high"
+        StreamButton.Visible = True
+    End Sub
+
+    Private Sub MediumTile_Click(sender As Object, e As EventArgs) Handles MediumQualityTile.Click
+        MediumQualityTile.setQuality(HighQualityTile, LowQualityTile)
+        selectedQuality = "medium"
+        StreamButton.Visible = True
+    End Sub
+
+    Private Sub LowTile_Click(sender As Object, e As EventArgs) Handles LowQualityTile.Click
+        LowQualityTile.setQuality(HighQualityTile, MediumQualityTile)
+        selectedQuality = "low"
+        StreamButton.Visible = True
+    End Sub
+#End Region
+
+    'Sends cmd stream commands and starts timer
     Private Sub StreamButton_Click_1(sender As Object, e As EventArgs) Handles StreamButton.Click
         StreamSpinner.Visible = True
         Timer1.Enabled = True
@@ -129,30 +177,7 @@ Public Class BrowseScreen
         Process.Start(p)
     End Sub
 
-    Private Sub HighButton_Click(sender As Object, e As EventArgs) Handles HighButton.Click
-        HighButton.BackColor = Color.FromArgb(0, 163, 0)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
-        selectedQuality = "best"
-        StreamButton.Visible = True
-    End Sub
-
-    Private Sub MediumButton_Click(sender As Object, e As EventArgs) Handles MediumButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(227, 162, 26)
-        LowButton.BackColor = Color.FromArgb(80, 80, 80)
-        selectedQuality = "medium"
-        StreamButton.Visible = True
-    End Sub
-
-    Private Sub LowButton_Click(sender As Object, e As EventArgs) Handles LowButton.Click
-        HighButton.BackColor = Color.FromArgb(80, 80, 80)
-        MediumButton.BackColor = Color.FromArgb(80, 80, 80)
-        LowButton.BackColor = Color.FromArgb(185, 29, 71)
-        selectedQuality = "worst"
-        StreamButton.Visible = True
-    End Sub
-
+    'Searches favorites and formats "Add Favorites" button
     Private Function searchFavorites() As Integer
         Dim search As String = StreamerComboBox.Text
         Dim text As String = File.ReadAllText(favePath)
@@ -168,6 +193,7 @@ Public Class BrowseScreen
         End If
     End Function
 
+    'Adds selection to favorites file
     Private Sub FavoritesButton_Click(sender As Object, e As EventArgs) Handles FavoritesButton.Click
         If searchFavorites() = 1 Then
             MessageBox.Show("Channel already added to favorites.", "Channel Saved", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -178,5 +204,13 @@ Public Class BrowseScreen
             FavoritesButton.Text = "Favorite" & Environment.NewLine & "Saved"
             FavoritesButton.BackColor = Color.FromArgb(150, 150, 150)
         End If
+    End Sub
+
+    'Refresh Games and Streamers comboboxes
+    Private Sub RefreshButton_Click(sender As Object, e As EventArgs) Handles RefreshButton.Click
+        hideAllButtons()
+        StreamerComboBox.Visible = False
+        GameComboBox.Items.Clear()
+        loadGameComboBox()
     End Sub
 End Class

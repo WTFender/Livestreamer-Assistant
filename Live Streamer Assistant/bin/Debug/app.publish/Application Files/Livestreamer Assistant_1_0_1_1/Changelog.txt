@@ -1,0 +1,8 @@
+﻿### 1.0.1.1
+1. Added VLC Directory Verification
+2. Added Refresh Button to Twitch Directory
+3. Optimize Various Animations and Classes
+
+
+### 1.0.0.26
+First Tracked Build
