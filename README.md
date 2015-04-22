@@ -1,4 +1,5 @@
 # Livestreamer Assistant
+##[Features & Installation Video](https://www.youtube.com/watch?v=hMov8N94Sho)  
 A Simple Livestreamer Interface
 ### Installation
 All folders outside of the installation.zip are unnecessary for deployment.  
@@ -26,5 +27,5 @@ Livestreamer Assistant is a simple GUI for streaming video through VLC media pla
 ### Future plans:  
 1. VLC Directory Checking  
 2. Exception Handling  
-3. Integrate more shared methods  
+3. MPC Integration  
 4. Sorting options for lists  
